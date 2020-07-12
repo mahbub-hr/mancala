@@ -1,0 +1,57 @@
+0	4	4	4	4	4	4	
+	4	4	4	4	4	4	0
+
+Printing children
+child 1: 
+0	4	4	4	4	4	4	
+	0	5	5	5	5	4	0
+
+child 2: 
+0	4	4	4	4	4	4	
+	4	0	5	5	5	5	0
+
+child 3: 
+0	4	4	4	4	4	4	
+	4	4	0	5	5	5	1
+
+child 4: 
+0	4	4	4	4	4	5	
+	4	4	4	0	5	5	1
+
+child 5: 
+0	4	4	4	4	5	5	
+	4	4	4	4	0	5	1
+
+child 6: 
+0	4	4	4	5	5	5	
+	4	4	4	4	4	0	1
+
+
+
+
+
+if(depthLimit == 0) {
+			if(isPlayer1 == true) return state.H1();
+			else return state.H2();
+		}
+		if(state.isEnd() == true) {
+			if(isPlayer1 == true) return state.H1();
+			else return state.H2();
+		}
+		
+		
+		
+public void makeMove(int binIdx, int excl) {
+		if(binIdx >= board.length) System.out.println("invalid starting move");
+		int stones = board[binIdx]; 
+		board[binIdx] =0;
+		while(stones > 0) {
+			binIdx = (binIdx+1)%14;
+			if(binIdx == excl) continue;
+			board[binIdx] += 1;
+			stones--;
+		}
+		
+		MiniMax miniMax = new MiniMax();
+		
+	}

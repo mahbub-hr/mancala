@@ -1,0 +1,1 @@
+an AI based implemntation of mancala game. Both players are bot. You can open the project directly in Eclipse.
